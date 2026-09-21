@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 0.18.1
+  version: "0.18.2"
 
 package:
   name: openairclim
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/o/openairclim/openairclim-${{ version }}.tar.gz
-  sha256: 277e8463168360c590dbde469e44419e1238c5967c0213c6294b03ef8030d975
+  sha256: e276c9268067af08b2540cec587b784bddf6efaefcb26eb9502c400e92a0c3e2
 
 build:
   number: 0
