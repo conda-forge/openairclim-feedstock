@@ -35,6 +35,7 @@ requirements:
     - numpy
     - pandas <3
     - matplotlib-base
+    - pillow
     - pint
     - xarray
     - netcdf4
