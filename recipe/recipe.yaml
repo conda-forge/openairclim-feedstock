@@ -45,8 +45,7 @@ requirements:
     - pydantic
     - platformdirs
     - requests
-    # Extra: gui
-    - panel
+    - panel >= 1.9
     - param
 
 tests:
