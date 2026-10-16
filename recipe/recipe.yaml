@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.19.1"
+  version: "0.20.0"
 
 package:
   name: openairclim
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/o/openairclim/openairclim-${{ version }}.tar.gz
-  sha256: 0e8a30402507b8b205ae97fa1b2037e268c161ef3dd0d45bd535baf41c273f6f
+  sha256: b0ccf7a0d3a427cc484222841dfaedbb8e3713e43a99ebcfbaa504cacd8c1159
 
 build:
   number: 0
@@ -23,6 +23,8 @@ build:
       - oac-download-zenodo = openairclim.utils.download_zenodo:main
       - oac-create-artificial-inventories = openairclim.utils.create_artificial_inventories:main
       - oac-create-time-evolution = openairclim.utils.create_time_evolution:main
+      - oac-get-metadata = openairclim.utils.output_metadata:main_get_metadata
+      - oac-config-from-nc = openairclim.utils.output_metadata:main_write_config_from_netcdf
 
 requirements:
   host:
@@ -31,23 +33,22 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
+    - ambiance
+    - deepmerge
     - joblib
+    - matplotlib-base
+    - netcdf4
     - numpy
     - pandas <3
-    - matplotlib-base
+    - panel >=1.9
+    - param
     - pillow
     - pint
-    - xarray
-    - netcdf4
-    - scipy
-    - deepmerge
-    - ambiance
-    - pydantic
     - platformdirs
+    - pydantic
     - requests
-    # Extra: gui
-    - panel
-    - param
+    - scipy
+    - xarray
 
 tests:
   - python:
