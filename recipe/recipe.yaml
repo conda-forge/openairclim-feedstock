@@ -31,22 +31,22 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
+    - ambiance
+    - deepmerge
     - joblib
+    - matplotlib-base
+    - netcdf4
     - numpy
     - pandas <3
-    - matplotlib-base
+    - panel >=1.9
+    - param
     - pillow
     - pint
-    - xarray
-    - netcdf4
-    - scipy
-    - deepmerge
-    - ambiance
-    - pydantic
     - platformdirs
+    - pydantic
     - requests
-    - panel >= 1.9
-    - param
+    - scipy
+    - xarray
 
 tests:
   - python:
